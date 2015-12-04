@@ -37,7 +37,7 @@ public class AddProviderDialog extends ContractDialogFragment<AddProviderDialog.
 			} else {
 				SearchProviderDialog dialog = SearchProviderDialog.newInstance((ArrayList<String>) result);
 				dialog.setTargetFragment(AddProviderDialog.this, 0);
-				dialog.show(getChildFragmentManager(), null);
+				dialog.show(getFragmentManager(), null);
 			}
 		}
 	};
@@ -74,7 +74,7 @@ public class AddProviderDialog extends ContractDialogFragment<AddProviderDialog.
 
 		mSearchDialog = ProgressDialogFragment.newInstance(R.string.searching_content_providers);
 		mSearchDialog.setup(searchProvidersTask, mDialogListener, false);
-		mSearchDialog.show(getChildFragmentManager(), null);
+		mSearchDialog.show(getFragmentManager(), null);
 	}
 
 	@Override
